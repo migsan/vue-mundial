@@ -47,6 +47,16 @@
           </v-layout>
         </v-container>
       </v-card>
+
+      <v-card flat color="grey lighten-4">
+        <v-container fluid>
+          <v-layout row>
+            <v-flex xs12 text-xs-center>
+              <span>{{ result }}</span>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-card>
     </v-flex>
   </v-layout>
 </template>
@@ -77,6 +87,7 @@ export default {
       }
 
       console.log('foundMatches: ', foundMatches)
+      this.result = foundMatches;
     }
   }
 }
